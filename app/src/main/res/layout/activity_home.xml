@@ -1,30 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:id="@+id/forgot_help"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="320dp">
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        ></View>
 
-        <TextView
-            android:id="@+id/usernameHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
-            android:text=""
-            android:textColor="#ffffff"
-            android:textSize="28sp" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/drop_down"
+        android:layout_marginLeft="25dp"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:textColor="@color/white"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="8dp"
+        android:textSize="25dp"
+        ></TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/search"
+        android:layout_marginLeft="320dp"
+        ></ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/cart"
+        android:layout_marginLeft="370dp"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="50dp"
+        android:text="Categories"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+</FrameLayout>

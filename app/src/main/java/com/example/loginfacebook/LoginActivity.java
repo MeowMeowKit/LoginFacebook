@@ -28,13 +28,13 @@ public class LoginActivity extends AppCompatActivity {
     public void onLogin(View view) throws IOException {
         String username = ((EditText) findViewById(R.id.username)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
-        if(username.equals("TetchaTeam")&&password.equals("123456")){
+        if(username.equals("tetchateam")&&password.equals("123456")){
             Intent iHome = new Intent(LoginActivity.this,HomeActivity.class);
             iHome.putExtra("username",username);
-            Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Welcome back...",Toast.LENGTH_LONG).show();
             startActivity(iHome);
         }else{
-            Toast.makeText(LoginActivity.this,"Wrong credential",Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this,"Invalid Email or Password!!! Try Again.",Toast.LENGTH_LONG).show();
             ((EditText) findViewById(R.id.password)).setText("");
         }
 
