@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Facebook Login</string>
     <string name="change">Change</string>
+
+    <string-array name="text_view">
+        <item>Gift</item>
+        <item>Cart</item>
+        <item>Baby</item>
+        <item>Cookie</item>
+        <item>Home</item>
+        <item>Phone</item>
+        <item>Bike</item>
+        <item>Shoes</item>
+        <item>Medical</item>
+    </string-array>
 </resources>

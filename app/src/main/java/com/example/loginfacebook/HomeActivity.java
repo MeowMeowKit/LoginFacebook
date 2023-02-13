@@ -16,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ProductAdapter adapter;
     private ArrayList<Product> productList;
+    int[] productImages = {R.drawable.gift, R.drawable.cart, R.drawable.baby, R.drawable.cookie, R.drawable.home, R.drawable.phone, R.drawable.bike, R.drawable.medical, R.drawable.shopping};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +35,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void ProductData() {
-        Product product1 = new Product("Gift", R.drawable.gift );
-        productList.add(product1);
 
-        Product product2 = new Product("Card",R.drawable.cart);
-        productList.add(product2);
+        String[] productName = getResources().getStringArray(R.array.text_view);
 
-        Product product3 = new Product("Baby",R.drawable.baby);
-        productList.add(product3);
-
-        Product product4 = new Product("Cookie",R.drawable.cookie);
-        productList.add(product4);
-
-        Product product5 = new Product("Home",R.drawable.home);
-        productList.add(product5);
-
-        Product product6 = new Product("Phone",R.drawable.phone);
-        productList.add(product6);
-
-        Product product7 = new Product("Bike",R.drawable.bike );
-        productList.add(product7);
-
-        Product product8 = new Product("Shoes",R.drawable.shoes);
-        productList.add(product8);
-
-        Product product9 = new Product("Medical",R.drawable.medical );
-        productList.add(product9);
+        for (int i = 0; i < productName.length; i++) {
+            productList.add(new Product(productName[i], productImages[i]));
+        }
 
         adapter.notifyDataSetChanged();
     }
