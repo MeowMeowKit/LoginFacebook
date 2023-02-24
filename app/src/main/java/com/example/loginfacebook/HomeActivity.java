@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import java.util.ArrayList;
-import java.util.List;
 
 import product.Product;
 import product.ProductAdapter;
@@ -17,6 +16,8 @@ public class HomeActivity extends AppCompatActivity {
     private ProductAdapter adapter;
     private ArrayList<Product> productList;
     int[] productImages = {R.drawable.gift, R.drawable.cart, R.drawable.baby, R.drawable.cookie, R.drawable.home, R.drawable.phone, R.drawable.bike, R.drawable.medical, R.drawable.shopping};
+
+    String[] phoneNumber = {"19000001","19000002","19000003","19000004","19000001","19000002","19000003","19000004"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,10 @@ public class HomeActivity extends AppCompatActivity {
         adapter = new ProductAdapter(productList);
         recyclerView.setAdapter(adapter);
 
-        ProductData();
+        setUpProductData();
     }
 
-    private void ProductData() {
+    private void setUpProductData() {
 
         String[] productName = getResources().getStringArray(R.array.text_view);
 
@@ -45,4 +46,14 @@ public class HomeActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+
+//    public void onItemClick(int position) {
+//        Intent intent = new Intent(HomeActivity.this, DetailActivity.class);
+//
+//        intent.putExtra("NAME",productList.get(position).getName());
+//        intent.putExtra("IMAGE",productList.get(position).getImage());
+//        intent.putExtra("PHONE",productList.get(position).getPhoneNumber());
+//
+//        startActivity(intent);
+//    }
 }
